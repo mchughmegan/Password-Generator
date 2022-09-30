@@ -16,37 +16,50 @@
 
 //create variables with arrays for each criteria or type
 
-var uppercase = ["A", "B"];
-var lowercase = 
-var numbers = 
-var specialchar =
+var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+var specialchar = ["!", "@", "#", "$", "%", "&"];
 
-//function that gathers the user inputs and returns selected options 
+  //function that gathers the user inputs and returns selected options 
   //store selections in an object
   //return object
 
-function getoptions () {
-  var length = parseInt (
-    prompt ("How many characters would you like your password to contain?")
-  );
-  if (Number.isNaN(length)) {
-    alert ("Password length must be provided as a number");
-    return null;
-  }
-  if (length < 8) {
-    alert ("Password length must be at least eight characters");
-    return null;
-  }
-  if (length > 128) {
-    alert ("Password length can be no greater than 128 characters");
-    return null;
-  }
+  function getoptions() {
+    var length = parseInt(
+      prompt("How many characters would you like your password to contain?")
+    );
+    if (Number.isNaN(length)) {
+      alert("Password length must be provided as a number");
+      return null;
+    }
+    if (length < 8) {
+      alert("Password length must be at least eight characters");
+      return null;
+    }
+    if (length > 128) {
+      alert("Password length can be no greater than 128 characters");
+      return null;
+    }
 
-  var hasuppercase = confirm (
-    "Click OK if you would like uppercase letters"
-  );
-//confirm chooses at least one okay
-};
+    var hasuppercase = confirm(
+      "Click OK if you would like uppercase letters"
+    );
+
+    var haslowercase = confirm(
+      "Click OK if you would like lowercase letters"
+    );
+
+    var hasnumbers = confirm(
+      "Click OK if you would like numbers"
+    );
+
+    var hasspecialcharacters = confirm(
+      "Click Ok if you would like special characters"
+    );
+
+    //confirm chooses at least one okay
+  };
 
 //create a function that picks elements from an array at random based on user inputs
 
