@@ -61,14 +61,26 @@ var specialchar = ["!", "@", "#", "$", "%", "&"];
     //confirm chooses at least one okay
 
     if (!hasuppercase && !haslowercase && !hasnumbers && !hasspecialcharacters) {
-      alert return null ("Password must have at least one of uppercase letters, lowercase letters, numbers, or special characters");
-
+      alert ("Password must have at least one of uppercase letters, lowercase letters, numbers, or special characters");
+      return null;
     }
+
+
+
   };
 
 //create a function that picks elements from an array at random based on user inputs
+function generatePassword() {
+  //conditions on which elements to use
+  //get random elements from the above arrays
+  if hasuppercase (math.floor(math.random(uppercase)*arr.length));
+  if haslowercase (math.floor(math.random(lowercase)*arr.length));
+  if hasnumbers (math.floor(math.random(numbers)*arr.length));
+  if hasspecialcharacters (math.floor(math.random(specialcharacters).arr.length));
 
-//generate password
+  //push it to a new array with just their password
+
+};
 
 
 
