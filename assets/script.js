@@ -59,6 +59,11 @@ var specialchar = ["!", "@", "#", "$", "%", "&"];
     );
 
     //confirm chooses at least one okay
+
+    if (!hasuppercase && !haslowercase && !hasnumbers && !hasspecialcharacters) {
+      alert return null ("Password must have at least one of uppercase letters, lowercase letters, numbers, or special characters");
+
+    }
   };
 
 //create a function that picks elements from an array at random based on user inputs
