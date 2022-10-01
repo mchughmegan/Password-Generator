@@ -1,16 +1,20 @@
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var specialchar = ["!", "@", "#", "$", "%", "&"];
 
   //function that gathers the user inputs and returns selected options 
   //store selections in an object
   //return object
 
-  function getoptions() {
+  function generatePassword() {
+    var elements = [];
+    var temppassword = "";
+
     var length = parseInt(
       prompt("How many characters would you like your password to contain?")
     );
+
     if (Number.isNaN(length)) {
       alert("Password length must be provided as a number");
       return null;
@@ -47,39 +51,24 @@ var specialchar = ["!", "@", "#", "$", "%", "&"];
       return null;
     }
 
+    if (hasuppercase) {elements = elements.concat(uppercase);}
+    if (haslowercase) {elements = elements.concat(lowercase);}
+    if (hasnumbers) {elements = elements.concat(numbers);}
+    if (hasspecialcharacters) {elements = elements.concat(specialchar);}
+
+    console.log(elements);
+
+    //picks elements from an array at random based on user inputs
+
+    for (i = 0; i < length; i++) {
+      temppassword = temppassword.concat(elements[Math.floor(Math.random()*elements.length)])}
+
+//gather elements into password
+    return temppassword
+
 
 
   };
-
-//create a function that picks elements from an array at random based on user inputs
-function getelements() {
-  //conditions on which elements to use
-  //get random elements from the above arrays
-if (getoptions.hasuppercase) {var uppercase = const passuppercase};
-if (getoptions.haslowercase) {var lowercase = const passlowercase};
-if (getoptions.hasnumbers) {var numbers = const passnumbers};
-if (getoptions.hasspecialcharacters) {var specialcharacters = const passspecialcharacters};
-
-const elements = passuppercase.concat(passlowercase, passuppercase, passnumbers, passspecialcharacters);
-
-console.log(elements);
-
-//  if hasuppercase (math.floor(math.random(uppercase)*arr.length));
-//  if haslowercase (math.floor(math.random(lowercase)*arr.length));
-//  if hasnumbers (math.floor(math.random(numbers)*arr.length));
-//  if hasspecialcharacters (math.floor(math.random(specialcharacters).arr.length));
-
-  //push it to a new array with just their password
-
-};
-
-//gather elements into password
-
-function generatePassword() {
-  Math.floor(Math.random(elements)*Array.length);
-};
-
-
 
 
 // Assignment Code
