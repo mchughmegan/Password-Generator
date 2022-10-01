@@ -66,8 +66,6 @@ var specialchar = ["!", "@", "#", "$", "%", "&"];
 //gather elements into password
     return temppassword
 
-
-
   };
 
 
